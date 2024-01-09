@@ -1,0 +1,18 @@
+<!-- TuneTracker/templates/TuneTracker/song_list.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Favourite Tunes - Song List</title>
+</head>
+
+<body>
+    <h2>Song List</h2>
+    <ul>
+        {% for song in songs %}
+        <li><a href="{% url 'song_detail' pk=song.pk %}">{{ song.title }} by {{ song.artist }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
